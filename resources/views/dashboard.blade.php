@@ -7,7 +7,7 @@
         <title>Laravel</title>
     </head>
     <body>
-    @include('partials.nav')
+        @include('partials.nav')
         <h1>Hola mundo</h1>
     </body>
 </html>
