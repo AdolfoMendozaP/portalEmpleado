@@ -32,5 +32,12 @@
             </label><br>
             <button type="submit">Ingresar</button>
         </form>
+        <a href="{{ route('password.request') }}">Olvide mi contraseña?</a>
+        <!--Recovery Password
+        <form action="">
+            <input type="text" name="" id="" placeholder="Recuperar Contraseña">
+            <button type="submit">Recuperar</button>
+        </form>
+        -->
     </body>
 </html>
