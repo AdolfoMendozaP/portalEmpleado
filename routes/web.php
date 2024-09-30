@@ -7,6 +7,8 @@ use Dotenv\Exception\ValidationException;
 use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\RestPasswordController;
+use App\Http\Controllers\Administrator\DashboardController;
+use App\Http\Controllers\Standard\WelcomeController;
 
 use function Laravel\Prompts\password;
 
@@ -30,5 +32,11 @@ Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestF
 Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 Route::get('password/reset/{token}', [RestPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [RestPasswordController::class, 'reset'])->name('password.update');
+
+//Ruta de Usuario
+Route::get('/welcome', [WelcomeController::class, 'index'])->middleware('auth');
+
+//Ruta de Administrador
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 

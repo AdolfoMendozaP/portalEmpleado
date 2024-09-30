@@ -8,6 +8,6 @@
     </head>
     <body>
     @include('partials.nav')
-        <h1>Hola mundo</h1>
+        <h1>Hola mundo, {{ $user->name }}!</h1>
     </body>
 </html>
